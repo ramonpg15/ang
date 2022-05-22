@@ -1,0 +1,45 @@
+<app-navegacion></app-navegacion>
+<br>
+<div class="row g-3 align-items-center">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>QUESTION</th>
+            <th>ANSWER-1</th>
+            <th>ANSWER-2</th>
+            <th>ANSWER-3</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <div class="box_style_1 expose"   >
+      </div>
+    <tbody>
+      <tr class="table-active" *ngFor="let auctionsFindSpecificSaleArr of auctionsFindSpecificSaleArr;let i= index ">
+        <td>{{ auctionsFindSpecificSaleArr.question_200}} </td>
+        <td>{{ auctionsFindSpecificSaleArr.answer1_200}}</td>
+        <td>{{ auctionsFindSpecificSaleArr.answer2_200}}</td>
+        <td>{{ auctionsFindSpecificSaleArr.answer3_200}}</td>
+        <td>
+          <form autocomplete="off" (ngSubmit)="doUpdate(FormaModr)" #FormaModr="ngForm">
+            <input type=hidden  name="id"  [(ngModel)]="auctionsFindSpecificSaleArr.id_question" >
+            <button type="submit" class="btn btn-outline-warning">UPDATE</button>
+          </form>
+          <br>
+          
+            
+            <button type="submit" class="btn btn-outline-danger" (click)="doDelete()">DELETE</button>      
+          
+
+          
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+</div>
+</div>

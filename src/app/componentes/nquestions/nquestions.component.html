@@ -1,0 +1,43 @@
+<app-navegacion></app-navegacion>
+
+<div class="row  align-items-center">
+    <div class="col-4"></div>
+    <div class="col-4"><br><br>
+        <div class="card text-white bg-secondary mb-3" style="width: 30rem;">
+            <div class="card-body">
+                <h1>New Question</h1><br>
+                <!--<form autocomplete="off" (ngSubmit)="saveNumber( FormaNumber )" #FormaNumber="ngForm">-->
+                <form autocomplete="off" (ngSubmit)="showModal()" #FormaNumber="ngForm" [formGroup]="forma">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputEmail4">Question</label>
+                            <textarea class="form-control" id="pre1" name="pre1" rows="3" formControlName="question"
+                                [(ngModel)]="question.question"></textarea>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="inputPassword4">Answer 1</label>
+                            <textarea class="form-control" id="res1" name="res1" rows="3" formControlName="pre1"
+                                [(ngModel)]="question.res1"></textarea>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Answer 2</label>
+                        <textarea class="form-control" id="res2" name="res2" rows="3" formControlName="pre2"
+                            [(ngModel)]="question.res2"></textarea>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="inputAddress2">Answer 3</label>
+                        <textarea class="form-control" id="res3" name="res3" rows="3" formControlName="pre3"
+                            [(ngModel)]="question.res3"></textarea>
+                    </div>
+                    <br>
+                    <!--<button type="submit" class="btn btn-success" (click)="showModal()">Agregar</button>-->
+                    <button type="submit" class="btn btn-success">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

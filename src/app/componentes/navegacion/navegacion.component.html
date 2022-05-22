@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <br>
+    <!--<a class="navbar-brand" href="menu_admin">Administrador</a>-->
+    <a class="navbar-brand" [routerLink]="['/menu_admin', ]">ADMIN</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <!--<a class="nav-link" href="nquestion"><button type="button" class="btn btn-outline-success">NUEVO</button>  </a>-->
+          <a class="nav-link"  [routerLink]="['/nquestion', ]"><button type="button" class="btn btn-outline-success">NEW</button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <!--<a class="nav-link" href="nquestion"><button type="button" class="btn btn-outline-success">NUEVO</button>  </a>-->
+          <a class="nav-link"  [routerLink]="['/login_sistema', ]"><button type="button" class="btn btn-outline-danger">EXIT</button></a>
+        </li>
+      </ul>
+    </div>
+  </nav>

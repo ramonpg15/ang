@@ -1,0 +1,23 @@
+<div class="row g-3 align-items-center">
+    <div class="col-4"></div>
+    <div class="col-4"><br><br>
+        <div class="card text-white bg-secondary mb-3"  style="width: 30rem;">
+            <div class="card-body">
+                <h1>System Question</h1><br><br>
+        <form [formGroup]="FormularioLogin" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><h2>User:</h2></label>
+            <input type="text" class="form-control" formControlName="login" aria-describedby="emailHelp">
+            <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+            </div>
+            <br>
+            <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"><h2>Password</h2></label>
+            <input type="password" class="form-control" formControlName="contra">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary"><h2>Sign In</h2></button>
+        </form>
+    </div></div>
+  </div>
+</div>
